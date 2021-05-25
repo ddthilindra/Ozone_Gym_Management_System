@@ -1,0 +1,301 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="OzoneFitness.admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./fontawasome/css/all.min.css">
+    <link rel="stylesheet" href="./Animate/animate.min.css">
+    <link rel="stylesheet" href="./AOS/aos.css">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
+
+    <script src="./jquery/jquery-3.5.1.slim.min.js"></script>
+    <script src="./jquery/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./AOS/aos.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form2" runat="server">
+        <div id="form1" runat="server">
+
+            <!-- ---------------------------------------------- HEADER STRAT ---------------------------------------------------------------------- -->
+
+            <div>
+
+                <header>
+                    <nav class="navbar  navbar-expand-lg navbar-dark bg-dark fixed-top">
+                        <a class="navbar-brand" href="#">
+
+                            <img src="./imgs/ozone-logo.jpg" width="50" height="50" class="rounded d-inline-block  align-middle" alt="" loading="lazy">
+                            OZONE FITNESS</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Shedule</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Diet</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="shop.aspx">Store</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                            </ul>
+
+
+
+                            <ul class="navbar-nav">
+
+
+                                <li class="nav-item">
+                                    <asp:ListView ID="ListView1" runat="server">
+                                        <ItemTemplate>
+
+                                            <img id="dietImg" src="<%# Eval("Image")%>" class="card-img-top" alt="...">
+                                        </ItemTemplate>
+                                    </asp:ListView>
+
+                                    <asp:Image ID="Image1" runat="server" class="rounded-circle align-middle" src="./imgs/client.jpg" alt="" Style="height: 30px; width: 30px;" />
+
+                                </li>
+
+                                <li class="nav-item">
+                                    <asp:LinkButton ID="Username1" class="nav-link" runat="server" Visible="True">Hi User</asp:LinkButton>
+
+                                </li>
+
+                                <li class="nav-item">
+                                    <asp:LinkButton ID="logout" class="nav-link" runat="server" Visible="True" OnClick="logout_Click"><span class="mybtn">Logout</span></asp:LinkButton>
+
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Cart.aspx"><span class="mybtn"><i class="fa fa-shopping-cart"></i></span> </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                </header>
+
+            </div>
+
+<!-- ---------------------------------------------- HEADER END ---------------------------------------------------------------------- -->
+    </div>
+<!-- ---------------------------------------------- COMMON BODY STRAT ---------------------------------------------------------------------- -->
+       
+        
+<!-- ---------------------------------------------- SIDE PANNEL START ---------------------------------------------------------------------- -->
+
+
+
+<div class="row side-pannel-our">
+  
+  <div class="col-md-2 bg-dark">
+    <div class="list-group " id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action bg-dark" id="list-customer-list" data-toggle="list" href="#list-customer" role="tab" aria-controls="customer">Customer</a>
+      <a class="list-group-item list-group-item-action bg-dark" href="add-employee.aspx" role="tab" aria-controls="employee">Employee</a>
+      <a class="list-group-item list-group-item-action bg-dark" href="admin-schedule.aspx" role="tab" aria-controls="shedule">Shedule</a>
+      <a class="list-group-item list-group-item-action bg-dark" href="admin-diet-details.aspx" role="tab" aria-controls="diet">Diet Plan</a>
+      <a class="list-group-item list-group-item-action bg-dark" href="admin-add-payment-package.aspx" role="tab" aria-controls="payment">Payment</a>
+      <a class="list-group-item list-group-item-action bg-dark" href="admin-additional-exp-details.aspx" role="tab" aria-controls="expencess">Additional Expences</a>
+      <a class="list-group-item list-group-item-action bg-dark" href="admin-item-details.aspx" role="tab" aria-controls="gym">Gym Store</a>
+      <a class="list-group-item list-group-item-action bg-dark" href="admin-booking-details.aspx" role="tab" aria-controls="booking">Booking</a>
+    </div>
+  </div>
+  <div class="col-md-10">
+    <div class="tab-content " id="nav-tabContent">
+
+<!-- ---------------------------------------------- CUSTOMER LIST START ---------------------------------------------------------------------- -->
+
+          <div>
+            <asp:ContentPlaceHolder ID="Customer" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+        
+
+<!-- ---------------------------------------------- CUSTOMER LIST END ---------------------------------------------------------------------- -->
+
+<!-- ---------------------------------------------- EMPLOYEE LIST START ---------------------------------------------------------------------- -->
+
+     
+            <div>
+            <asp:ContentPlaceHolder ID="Employee" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+        
+
+<!-- ---------------------------------------------- CUSTOMER LIST END ---------------------------------------------------------------------- -->
+
+<!-- ---------------------------------------------- SHEDULE LIST START ---------------------------------------------------------------------- -->
+
+        
+        <div>
+            <asp:ContentPlaceHolder ID="Shedule" runat="server">
+
+            </asp:ContentPlaceHolder>
+       </div>
+
+
+<!-- ---------------------------------------------- SHEDULE LIST END ---------------------------------------------------------------------- -->
+
+<!-- ---------------------------------------------- DIET LIST START ---------------------------------------------------------------------- -->
+
+     
+        <div>
+            <asp:ContentPlaceHolder ID="Diets" runat="server">
+
+            </asp:ContentPlaceHolder>
+       </div>
+        
+
+<!-- ---------------------------------------------- DIET LIST END ---------------------------------------------------------------------- -->
+
+
+<!-- ---------------------------------------------- PAYMENT LIST START ---------------------------------------------------------------------- -->
+
+
+            <div>
+                <asp:ContentPlaceHolder ID="Payment" runat="server">
+
+                </asp:ContentPlaceHolder>
+            </div>
+       
+
+<!-- ---------------------------------------------- PAYMENT LIST END ---------------------------------------------------------------------- -->
+
+<!-- ---------------------------------------------- EXPENCESS LIST START ---------------------------------------------------------------------- -->
+
+
+            <div>
+                <asp:ContentPlaceHolder ID="Expencess" runat="server">
+
+                </asp:ContentPlaceHolder>
+            </div>
+        
+
+
+<!-- ---------------------------------------------- EXPECESS LIST END ---------------------------------------------------------------------- -->
+        
+<!-- ---------------------------------------------- GYM LIST START ---------------------------------------------------------------------- -->
+
+            <div>
+                <asp:ContentPlaceHolder ID="Gym" runat="server">
+
+                </asp:ContentPlaceHolder>
+            </div>
+        
+
+<!-- ---------------------------------------------- GYM LIST END ---------------------------------------------------------------------- -->
+
+<!-- ---------------------------------------------- BOOKING LIST START ---------------------------------------------------------------------- -->
+
+
+            <div>
+            <asp:ContentPlaceHolder ID="Booking" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+       
+
+<!-- ---------------------------------------------- BOOKING LIST END ---------------------------------------------------------------------- -->
+
+
+      </div>
+
+
+      
+    </div>
+  </div>
+
+
+
+
+
+<!-- ---------------------------------------------- SIDE PANNEL END ---------------------------------------------------------------------- -->
+
+
+
+        
+        
+        
+        
+
+
+
+
+<!-- ---------------------------------------------- FOOTER START ---------------------------------------------------------------------- -->
+
+<footer class="bg-dark">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card text-white bg-transparent">
+        <img src="./imgs/ozone-logo.jpg" alt="" style="height: 200px; width: 200px;">
+        <div class="card-body">
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iste amet neque quisquam veritatis maxime facere fugiat, inventore libero totam eum deleniti laboriosam dicta. Quidem soluta facilis laborum molestiae atque!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card text-white bg-transparent">
+        <div class="card-body">
+          <h2 class="card-title">Location</h2>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card text-white bg-transparent">
+        <div class="card-body">
+          <h2 class="card-title">Opening Hours</h2>
+          <p class="card-text">Week Days 6 A.M. TO 10 P.M.</p>
+          <p class="card-text">Saturday 6 A.M. TO 8 P.M.</p>
+          <p class="card-text bg-danger">Sunday Closed</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  <hr>
+</div>
+
+  <div class="copy bg-transparent">
+    <span class="text-muted text-center">Designed and built by NAN SQD</span>
+    <span class="text-muted text-center">&copy; Allright Reserved 2020</span>
+  </div>
+</footer>
+
+<script>
+           AOS.init(
+             {
+               offset: 100,
+               duration:500
+             }
+           );
+</script>
+
+  <!-- ---------------------------------------------- FOOTER END ---------------------------------------------------------------------- -->
+    </form>
+</body>
+</html>

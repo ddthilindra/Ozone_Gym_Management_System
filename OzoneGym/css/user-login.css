@@ -1,0 +1,159 @@
+body{
+    background-image: url(../imgs/footer_lodyas.png);
+    background-size: 400px 400px;
+}
+
+header{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navbar{
+    padding: 20px;
+}
+
+.navbar-dark .navbar-brand{
+    color: #fffd7c;
+}
+
+.navbar-dark .navbar-brand:hover{
+    color: #fffd7c;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link {
+    color: #fffd7c7a;
+}
+
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fffd7c;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-link {
+ color:#fffd7c;
+}
+
+
+/* .mybtn{
+    border: 2px solid #fffd7c;
+    border-radius: 50px;
+    padding: .5rem;
+    transition: background-color .5s ease-in-out;
+}
+
+.mybtn:hover{
+    color: rgb(0, 0, 0);
+    background-color: #fffd7c;
+} */
+
+@media only screen and (max-width:767px) {
+    .navbar-nav .mr-auto{
+        background: rgba(0, 0, 0, 0.555);
+    }
+
+    .mybtn {
+     border: none;
+     border-radius: 0;
+     padding: 0;
+     transition: none;
+    }
+
+    .mybtn:hover{
+        color: #fffd7c;;
+    background-color: transparent;
+    }
+
+    .navbar-toggler{
+        color: #000000;
+        background: #FFD700;
+    }
+}
+
+
+/* --------------------------------------------------------Register Form------------------------------------------------- */
+.loginform {
+    background: #3f3f3faf;
+    border: 1px solid #ffa600;
+    margin-top:170px;
+    width: 35%;
+    padding: 40px;
+    margin-bottom: 100px;
+}
+
+.sign h3{
+    
+    margin-bottom: 30px;
+    color: #ffa600;
+    
+    padding-left: 20px;
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+
+
+.btn-primary {
+    border: black;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color:#ffa600;
+    color: #ffff;
+    transition: background-color .5s ease-in-out;
+}
+
+.uid {
+    margin-bottom: 30px;
+    color: #ffa600 !important;
+}
+
+.btn-primary:hover {
+    background-color:#FFD700;
+    color: black;
+}
+
+/* -------------------------------------------------------- FOOTER START ------------------------------------------------ */
+
+
+footer .row{
+    margin-right: unset;
+}
+
+footer .col-md-4 .card{
+    border: none;
+    color: #fffd7c;
+}
+
+footer .col-md-4 .card p{
+    color: #fffd7c;
+}
+
+footer .col-md-4 .card h2{
+    color: #ffa600;
+}
+
+footer img{
+    padding: 1.25rem;
+}
+
+footer .copy{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+footer hr{
+    border-top: 1px solid #6c757d;
+  }
+/* -------------------------------------------------------- FOOTER END ------------------------------------------------ */

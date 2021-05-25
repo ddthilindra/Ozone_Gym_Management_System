@@ -1,0 +1,284 @@
+body{
+    background-color: #000000;
+}
+
+header{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navbar{
+    padding: 20px;
+}
+
+.navbar-dark .navbar-brand{
+    color: #fffd7c;
+}
+
+.navbar-dark .navbar-brand:hover{
+    color: #fffd7c;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link {
+    color: #fffd7c7a;
+}
+
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fffd7c;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-link {
+ color:#fffd7c;
+}
+
+
+/* .mybtn{
+    border: 2px solid #fffd7c;
+    border-radius: 50px;
+    padding: .5rem;
+    transition: background-color .5s ease-in-out;
+}
+
+.mybtn:hover{
+    color: rgb(0, 0, 0);
+    background-color: #fffd7c;
+} */
+
+@media only screen and (max-width:767px) {
+    .navbar-nav .mr-auto{
+        background: rgba(0, 0, 0, 0.555);
+    }
+
+    .mybtn {
+     border: none;
+     border-radius: 0;
+     padding: 0;
+     transition: none;
+    }
+
+    .mybtn:hover{
+        color: #fffd7c;;
+    background-color: transparent;
+    }
+
+    .navbar-toggler{
+        color: #000000;
+        background: #FFD700;
+    }
+}
+
+/* --------------------------------------------------- Carousel Start ------------------------------------------------- */
+.carousel{
+    background-color: black;
+}
+
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.w-100{
+    height: 100vh;
+}
+
+.carousel-caption{
+    bottom: 100px;
+}
+
+.carousel-caption h5{
+    margin-bottom: 50px;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFD700; */
+}
+
+.carousel-caption p{
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* -------------------------------------------------------- INFO START ------------------------------------------------ */
+
+.info{
+    background-image: url(../imgs/y-so-serious.png);
+    background-attachment: fixed;
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+}
+
+.wrap{
+    border: 2px solid #ffa600;
+    border-radius: 5px;
+    transition: background-color .5s ease-in-out;
+}
+
+.wrap:hover span{
+    background-color: #000000;
+    color: rgb(126, 126, 126);
+}
+
+.wrap:hover{
+    background-color: #ffa600;
+}
+
+.wrap:hover p{
+    cursor: default;
+    color: #ffffff;
+}
+
+.col-md-3 p{
+    margin-left: 20px;
+    color: #fffd7c;
+    
+}
+
+.col-md-3 span{
+    display: flex;
+    justify-content: center;
+    background-color: #ffa600;
+    padding: 20px;
+    transition: background-color .5s ease-in-out;
+}
+
+@media only screen and (min-width:767px) {
+    .wrap{
+       display: flex;
+       flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .wrap{
+        display: flex;
+       margin-bottom: 5px;
+    }
+}
+
+/* -------------------------------------------------------- INFO END ------------------------------------------------ */
+
+
+/* -------------------------------------------------------- TRAINERS START ------------------------------------------------ */
+.trainers{
+    background-color: rgb(0, 0, 0);
+}
+
+.trainers .row{
+    margin-right: unset;
+}
+
+.trainers .container h2{
+    color: #fffd7c;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+.trainers .card-group{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2vh;
+}
+
+.trainers .card-body{
+    background-color: #ffa600;
+}
+
+.trainers .card{
+    border: 2px solid #ffa600;
+}
+
+@media only screen and (max-width:767px) {
+    .trainers .card-group{
+        display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-content: center;
+    }
+    .trainers .card{
+        margin-bottom: 5px;
+    }
+}    
+
+/* -------------------------------------------------------- TRAINERS END ------------------------------------------------ */
+
+
+/* -------------------------------------------------------- SUPPLIMENT START ------------------------------------------------ */
+
+.suppliments{
+    background-color: rgb(26, 26, 26);
+    background-image: url(../imgs/y-so-serious.png);
+    padding-top: 5vh;
+}
+.suppliments .container h2{
+    color: #fffd7c;
+    margin-bottom: 2vh;
+}
+
+.suppliments .row{
+    margin-top: 5vh;
+}
+
+.row-low{
+    margin-top: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.suppliments .container img{
+   margin-bottom: 2rem;
+}
+
+
+/* -------------------------------------------------------- supPLIMENT END ------------------------------------------------ */
+
+
+/* -------------------------------------------------------- FOOTER START ------------------------------------------------ */
+
+
+footer .row{
+    margin-right: unset;
+}
+
+footer .col-md-4 .card{
+    border: none;
+    color: #fffd7c;
+}
+
+footer .col-md-4 .card p{
+    color: #fffd7c;
+}
+
+footer .col-md-4 .card h2{
+    color: #ffa600;
+}
+
+footer img{
+    padding: 1.25rem;
+}
+
+footer .copy{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+footer hr{
+    border-top: 1px solid #6c757d;
+  }
+/* -------------------------------------------------------- FOOTER END ------------------------------------------------ */
